@@ -1,7 +1,7 @@
 {
-    "name": "@arkecosystem/core",
+    "name": "@myn/core",
     "version": "2.6.49",
-    "description": "Core of the ARK Blockchain",
+    "description": "Core of the MyChainBis Blockchain",
     "license": "MIT",
     "contributors": [
         "François-Xavier Thoorens <fx@ark.io>",
@@ -17,10 +17,9 @@
     "main": "dist/index",
     "types": "dist/index",
     "bin": {
-        "ark": "./bin/run"
+        "myn": "./bin/run"
     },
     "scripts": {
-        "ark": "./bin/run",
         "build": "yarn clean && yarn compile && yarn copy",
         "build:watch": "yarn clean && yarn copy && yarn compile -w",
         "clean": "del dist",
@@ -41,7 +40,8 @@
         "relay:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark relay:run --env=test",
         "start:devnet": "cross-env CORE_PATH_CONFIG=./bin/config/devnet yarn ark core:run",
         "start:mainnet": "cross-env CORE_PATH_CONFIG=./bin/config/mainnet yarn ark core:run",
-        "start:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark core:run --env=test"
+        "start:testnet": "cross-env CORE_PATH_CONFIG=./bin/config/testnet yarn ark core:run --env=test",
+        "myn": "./bin/run"
     },
     "dependencies": {
         "@arkecosystem/core-api": "^2.6.49",
@@ -128,7 +128,7 @@
                 "./dist/hooks/command_not_found/suggest"
             ]
         },
-        "bin": "ark",
+        "bin": "myn",
         "topics": {
             "config": {
                 "description": "manage core config variables"
